@@ -152,8 +152,6 @@ AB_OTA_PARTITIONS += \
     product \
     vendor
 
-BUILD_WITHOUT_VENDOR := true
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -884,3 +882,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Increment the SVN for any official public releases
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.build.svn=25
+
+# Missing vendor packages
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libjson \
+    libtinyxml \
+    libwifi-hal:64 \
+    libwifi-hal-qcom

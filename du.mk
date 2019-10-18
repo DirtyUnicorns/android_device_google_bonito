@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 The Dirty Unicorns Project
+# Copyright (C) 2018-2020 The Dirty Unicorns Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,8 +35,6 @@ BUILD_FINGERPRINT := "google/bonito/bonito:QQ3A.200705.002/6506677:user/release-
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/bonito/bonito:10/QQ3A.200705.002/6506677:user/release-keys
-
-BOARD_PREBUILT_VENDORIMAGE := vendor/images/bonito/vendor.img
 
 $(call inherit-product-if-exists, vendor/google/bonito/bonito-vendor.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
